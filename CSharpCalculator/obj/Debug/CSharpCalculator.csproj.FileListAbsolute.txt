@@ -1,0 +1,1 @@
+C:\Users\JimmyDesktop\Documents\Visual Studio 2012\Projects\CSharpCalculator\CSharpCalculator\bin\Debug\CSharpCalculator.exe.config
