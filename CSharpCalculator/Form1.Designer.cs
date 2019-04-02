@@ -111,6 +111,7 @@
             this.multiplicationButton.TabIndex = 4;
             this.multiplicationButton.Text = "X";
             this.multiplicationButton.UseVisualStyleBackColor = false;
+            this.multiplicationButton.Click += new System.EventHandler(this.multiplicationButton_Click);
             // 
             // fourButton
             // 
@@ -162,6 +163,7 @@
             this.minusButton.TabIndex = 8;
             this.minusButton.Text = "-";
             this.minusButton.UseVisualStyleBackColor = false;
+            this.minusButton.Click += new System.EventHandler(this.minusButton_Click);
             // 
             // oneButton
             // 
@@ -284,6 +286,7 @@
             this.divideButton.TabIndex = 18;
             this.divideButton.Text = "/";
             this.divideButton.UseVisualStyleBackColor = false;
+            this.divideButton.Click += new System.EventHandler(this.divideButton_Click);
             // 
             // solutionTextBox
             // 
