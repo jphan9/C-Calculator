@@ -208,6 +208,7 @@ namespace CSharpCalculator
 
         private void multiplicationButton_Click(object sender, EventArgs e)
         {
+            firstCount++;
             if (total == 0)
             {
                 total = s1;
@@ -216,7 +217,14 @@ namespace CSharpCalculator
             }
             count++;
             s1 = Double.Parse(solutionTextBox.Text);
-            total = total * s1;
+
+            // If this is the first time that the button has been hit, set the total to the number in the text field. Else set the old total and divide by the number in the text field.
+            if (firstCount == 1)
+            {
+                total = s1;
+            }
+            else
+                total = total / s1;
             Console.WriteLine("Total: " + total.ToString());
             Console.WriteLine("S1: " + s1.ToString());
             multiplication = true;
