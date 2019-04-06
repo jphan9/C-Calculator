@@ -138,17 +138,20 @@ namespace CSharpCalculator
         {
             count++;
             s1 = Double.Parse(solutionTextBox.Text);
-            total = total + s1;
-            Console.WriteLine(total.ToString());
+            solutionTextBox.Text = total.ToString();
+            total = s1;
+            Console.WriteLine("plus s1: " + s1.ToString());
+            Console.WriteLine("plus total: " + total.ToString());
             addition = true;
 
             solutionTextBox.Text = "";
 
-            if (count > 1)
+            /*if (count > 1)
             {
                 solutionTextBox.Text = total.ToString();
                 hasNumber = true;
             }
+            */
         }
 
         private void minusButton_Click(object sender, EventArgs e)
@@ -199,11 +202,12 @@ namespace CSharpCalculator
 
             solutionTextBox.Text = "";
 
-            if (count > 1)
+            /*if (count > 1)
             {
                 solutionTextBox.Text = total.ToString();
                 hasNumber = true;
             }
+             * */
         }
 
         private void multiplicationButton_Click(object sender, EventArgs e)
@@ -244,22 +248,29 @@ namespace CSharpCalculator
             if (addition == true)
             {
                 total = total + s2;
+                Console.WriteLine("Addition S2: " + s2.ToString());
+                Console.WriteLine("Addition Real Total: " + total.ToString());
+                addition = false;
             }
-            if (subtraction == true)
+            else if (subtraction == true)
             {
                 total = total - s2;
+                subtraction = false;
             }
-            if (multiplication == true)
+            else if (multiplication == true)
             {
                 total = total * s2;
+                multiplication = false;
             }
-            if (division == true)
+            else if (division == true)
             {
                 total = total / s2;
                 Console.WriteLine("S2: " + s2.ToString());
                 Console.WriteLine("Real Total: " + total.ToString());
+                division = false;
             }
             solutionTextBox.Text = total.ToString();
+            Console.WriteLine("Text: " + solutionTextBox.Text);
             count = 0;
             firstCount = 0;
             hasNumber = false;
